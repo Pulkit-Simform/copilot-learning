@@ -4,13 +4,14 @@ export interface User {
   id: number;
   name: string;
   email: string;
+  phoneNo: string;
 }
 
 @Injectable()
 export class UserService {
   private users: User[] = [
-    { id: 1, name: 'John Doe', email: 'john@example.com' },
-    { id: 2, name: 'Jane Smith', email: 'jane@example.com' },
+    { id: 1, name: 'John Doe', email: 'john@example.com', phoneNo: '1234567890' },
+    { id: 2, name: 'Jane Smith', email: 'jane@example.com', phoneNo: '0987654321' },
   ];
 
   findAll(): User[] {
